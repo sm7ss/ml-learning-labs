@@ -1,0 +1,25 @@
+[project]
+name = "sornero"
+version = "0.1.0"
+description = "Learning ML"
+authors = [
+    {name = "Arbolitos Mi Casita",email = "ns.7m.sw@gmail.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn (>=1.6.0)",
+    "matplotlib (>=3.10.9,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "pyarrow (>=24.0.0,<25.0.0)",
+    "hydra-core (>=1.3.2,<2.0.0)",
+    "omegaconf (>=2.3.0,<3.0.0)",
+    "numpy (==2.2.6)",
+    "pydantic (>=2.13.4,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
