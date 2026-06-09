@@ -112,6 +112,8 @@ cython_debug/
 .vscode/
 
 # Data files (add specific extensions you don't want to upload)
+*.csv
+*.parquet
 *.xlsx
 *.xls
 *.db
