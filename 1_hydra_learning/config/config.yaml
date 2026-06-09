@@ -1,0 +1,16 @@
+defaults: 
+  - model: "random_forest"
+  - data: "data"
+  - _self_
+
+training: 
+  test_size: 0.25
+  random_state: 42
+
+hydra: 
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+
