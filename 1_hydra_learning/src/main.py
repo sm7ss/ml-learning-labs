@@ -91,7 +91,7 @@ class DataVal(BaseModel):
         return self
 
 class Training(BaseModel): 
-    test_size: float= Field(ge=0.01, le=100)
+    test_size: float= Field(ge=0.01, le=0.99)
     random_state: int= Field(ge=0)
 
 class ConfigVal(BaseModel):
@@ -109,7 +109,7 @@ def main(cfg: DictConfig) -> None:
     
     try: 
         validate_cfg= ConfigVal(**dict_config)
-        logger.info(f'Successful validation')
+        logger.info('Successful validation')
     except Exception as e:
         logger.error(f'There are problems in validating fields:\n{e}')
     
