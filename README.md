@@ -95,9 +95,9 @@ Practice folder where I learned to use **Hydra + OmegaConf** before integrating 
 ```text
 📂 ml-learning-labs/
 ├── 📂 .github/
-│   └── 📂 workflows/
-│       └── lint.yaml                    # Automatic linting
-├── 📂 1_hydra_learning/                 # Hydra learning
+│   ├── 📂 workflows/
+│   │   └── lint.yaml                    # Automatic linting
+├── 📂 1_hydra_learning/                 # Hydra Learning
 │   ├── 📂 config/
 │   │   ├── 📂 data/
 │   │   │   └── data.yaml                # Data configuration
@@ -110,14 +110,21 @@ Practice folder where I learned to use **Hydra + OmegaConf** before integrating 
 │   │   └── main.py
 ├── 📂 project/                          # Main project (all modules)
 │   ├── 📂 config/
-│   ├── 📂 data/
-│   │   ├── train.csv
-│   │   └── test.csv
-│   ├── 📂 notebooks/                    # Exploration and prototyping
-│   └── 📂 src/
+│   │   ├── 📂 data/
+│   │   │   └── data.yaml                # Data configuration
+│   │   ├── 📂 model/
+│   │   │   ├── decision_tree_classifier.yaml
+│   │   │   ├── decision_tree_regressor.yaml
+│   │   │   └── random_forest_classifier.yaml
+│   │   └── config.yaml                  # Main config
+│   ├── 📂 src/
+│   │   ├── 📂 validation/
+│   │   │   ├── config_validation.py      # General configuration validation
+│   │   │   ├── data_validation.py        # Data configuration validation
+│   │   │   └── model_validation.py       # Model configuration validation
 ├── .gitignore
 ├── LICENSE
-├── main.py                              # Project entry point
+├── main.py                               # Project entry point
 ├── poetry.lock
 ├── pyproject.toml
 ├── README-ESP.md

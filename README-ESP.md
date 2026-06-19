@@ -95,8 +95,8 @@ Carpeta de práctica donde aprendí a usar **Hydra + OmegaConf** antes de integr
 ```text
 📂 ml-learning-labs/
 ├── 📂 .github/
-│   └── 📂 workflows/
-│       └── lint.yaml                    # Linting automático
+│   ├── 📂 workflows/
+│   │   └── lint.yaml                    # Linting automático
 ├── 📂 1_hydra_learning/                 # Aprendizaje de Hydra
 │   ├── 📂 config/
 │   │   ├── 📂 data/
@@ -109,12 +109,19 @@ Carpeta de práctica donde aprendí a usar **Hydra + OmegaConf** antes de integr
 │   ├── 📂 src/
 │   │   └── main.py
 ├── 📂 project/                          # Proyecto principal (todos los módulos)
-│   ├── 📂 config//
-│   ├── 📂 data/
-│   │   ├── train.csv
-│   │   └── test.csv
-│   ├── 📂 notebooks/                    # Exploración y prototipado
-│   └── 📂 src/
+│   ├── 📂 config/
+│   │   ├── 📂 data/
+│   │   │   └── data.yaml                # Configuración de datos
+│   │   ├── 📂 model/
+│   │   │   ├── decision_tree_classifier.yaml
+│   │   │   ├── decision_tree_regressor.yaml
+│   │   │   └── random_forest_classifier.yaml    # Exploración y prototipado
+│   │   └── config.yaml  
+│   ├── 📂 src/
+│   │   ├── 📂 validation/
+│   │   │   ├── config_validation.py      # Validación de configuración general 
+│   │   │   ├── data_validation.py        # Validación de configuración de datos
+│   │   │   └── model_validation.py       # Validación de configuración de modelos
 ├── .gitignore
 ├── LICENSE
 ├── main.py     # Entry point del proyecto
